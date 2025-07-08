@@ -111,16 +111,6 @@
   </div>
 
 
-<div id="countapi" style="font-size: 1.2rem; color: #333;"></div>
-<script src="https://api.countapi.xyz/hit/your-namespace/your-key"></script>
-<script>
-  fetch('https://api.countapi.xyz/get/your-namespace/your-key')
-    .then(response => response.json())
-    .then(data => {
-      document.getElementById('countapi').textContent = data.value + ' people have visited this site so far';
-    });
-</script>
-
 
 </body>
 </html>
