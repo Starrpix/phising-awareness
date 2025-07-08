@@ -28,6 +28,7 @@
       box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       text-align: center;
       user-select: none;
+      margin-bottom: 60px;
     }
 
     h1 {
@@ -109,10 +110,16 @@
     <a class="btn" href="https://phishingquiz.withgoogle.com/" target="_blank" rel="noopener noreferrer">Take Google’s Phishing Quiz</a>
   </div>
 
-<div style="margin-top: 30px; font-family: 'Poppins', sans-serif; color: #555; font-size: 1rem;">
-  <img src="https://visitorbadge.io/api/badge?page_id=phishing-awareness-page" alt="Visitor Count" style="vertical-align: middle; margin-right: 8px;" />
-  <span>people have visited this site so far</span>
-</div>
+
+<div id="countapi" style="font-size: 1.2rem; color: #333;"></div>
+<script src="https://api.countapi.xyz/hit/your-namespace/your-key"></script>
+<script>
+  fetch('https://api.countapi.xyz/get/your-namespace/your-key')
+    .then(response => response.json())
+    .then(data => {
+      document.getElementById('countapi').textContent = data.value + ' people have visited this site so far';
+    });
+</script>
 
 
 </body>
