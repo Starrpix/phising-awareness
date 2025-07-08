@@ -1,44 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Think Before You Click</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
     body {
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(135deg, #fffbeb, #fff9f0);
+      color: #2c3e50;
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .container {
+      background: #ffffff;
+      max-width: 480px;
+      width: 100%;
+      padding: 40px 30px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
       text-align: center;
-      padding: 50px;
-      background-color: #fffbe6;
-      color: #222;
+      user-select: none;
     }
+
     h1 {
-      color: #c0392b;
-    }
-    .warning {
-      font-size: 1.5rem;
       color: #e74c3c;
-      margin-top: 20px;
+      font-weight: 600;
+      font-size: 2.4rem;
+      margin-bottom: 16px;
+      letter-spacing: 0.05em;
     }
+
+    p {
+      font-size: 1.125rem;
+      line-height: 1.5;
+      margin: 12px 0;
+      color: #34495e;
+    }
+
+    .warning {
+      font-weight: 600;
+      font-size: 1.25rem;
+      color: #c0392b;
+      margin-top: 24px;
+      margin-bottom: 24px;
+    }
+
     .btn {
       display: inline-block;
-      margin-top: 30px;
-      padding: 12px 24px;
-      background-color: #3498db;
+      background: #3498db;
       color: white;
       text-decoration: none;
-      border-radius: 6px;
+      font-weight: 600;
+      font-size: 1.125rem;
+      padding: 14px 36px;
+      border-radius: 30px;
+      box-shadow: 0 6px 12px rgba(52, 152, 219, 0.4);
+      transition: background 0.3s ease, box-shadow 0.3s ease;
     }
-    .btn:hover {
-      background-color: #2980b9;
+
+    .btn:hover,
+    .btn:focus {
+      background: #2980b9;
+      box-shadow: 0 8px 18px rgba(41, 128, 185, 0.6);
+      outline: none;
+    }
+
+    @media (max-width: 500px) {
+      .container {
+        padding: 30px 20px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      .btn {
+        padding: 12px 28px;
+        font-size: 1rem;
+      }
     }
   </style>
 </head>
 <body>
-  <h1>⚠️ This Could Have Been a Phishing Link</h1>
-  <p>You scanned a QR code expecting a reward. But what if it had stolen your data?</p>
-  <p class="warning">Always verify links and QR codes before clicking.</p>
-  <p>Stay safe online and double-check URLs, especially from unknown sources.</p>
-  <a class="btn" href="https://phishingquiz.withgoogle.com/" target="_blank">Take Google’s Phishing Quiz</a>
+  <div class="container" role="main">
+    <h1>⚠️ This Could Have Been a Phishing Link</h1>
+    <p>You scanned a QR code expecting a reward. But what if it had stolen your data?</p>
+    <p class="warning">Always verify links and QR codes before clicking.</p>
+    <p>Stay safe online and double-check URLs, especially from unknown sources.</p>
+    <a class="btn" href="https://phishingquiz.withgoogle.com/" target="_blank" rel="noopener noreferrer">Take Google’s Phishing Quiz</a>
+  </div>
 </body>
 </html>
